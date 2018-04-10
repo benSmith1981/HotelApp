@@ -1,0 +1,34 @@
+[{
+ "_id": "5a9e8d239b226c311a1cea47",
+ "endDate": "2019-01-01",
+ "startDate": "2015-01-01",
+ "rateCode": "30MODBP",
+ "privileges": "Advance reservation is required. \r\nOffer applicable only for mobile bookings. \r\nSubject to availability and a cancellation policy. \r\nGeneral terms and conditions apply.",
+ "description": "20% off from Dusit Best Available Rate with Breakfast ",
+ "name": "Dusit mobile application exclusive package",
+ "__v": 0,
+ "image": "https://ucarecdn.com/2d522226-3206-49f6-829c-c5602bd06a3c/",
+ "hotels": ["59881e24f8e1db0004be5881", "598821a5dc1a4e00048ccf26", "59882e57dc1a4e00048ccf28", "59883d292d8d8e0004bd0d9f", "598840f02d8d8e0004bd0da1", "598841e42d8d8e0004bd0da3", "598844fe2d8d8e0004bd0da8", "598848e13a82aa0004b038e5", "59884c593a82aa0004b038e7"]
+ }, {
+ "_id": "5a9ea2109b226c311a1cea48",
+ "endDate": "2020-01-01",
+ "startDate": "2010-01-01",
+ "rateCode": "AAAAAA",
+ "image": "https://ucarecdn.com/049ae670-c4ce-4ec9-adcf-c8f39718c0ef/",
+ "privileges": "Priviledge 1\r\nPriviledge 2",
+ "description": "Test test test",
+ "name": "Another sample offer",
+ "__v": 0,
+ "hotels": ["59883d292d8d8e0004bd0d9f", "59883dd62d8d8e0004bd0da0", "598840f02d8d8e0004bd0da1", "598841802d8d8e0004bd0da2", "598842a42d8d8e0004bd0da4"]
+ }, {
+ "_id": "5aa0c65c9b226c311a1cea49",
+ "endDate": "2020-01-01",
+ "startDate": "2001-01-01",
+ "rateCode": "888888",
+ "image": "https://ucarecdn.com/1328bcab-ed6f-4e44-8098-dde112dc24d3/",
+ "privileges": "Example 1\r\nExample 2",
+ "description": "This offer is exclusively available at our Maldives hotel",
+ "name": "Just Maldives",
+ "__v": 0,
+ "hotels": ["598840f02d8d8e0004bd0da1"]
+ }]

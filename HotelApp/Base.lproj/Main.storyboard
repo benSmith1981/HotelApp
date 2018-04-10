@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TL8-DW-eUO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,146 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HotelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hva-hO-WRA">
+                                <rect key="frame" x="139" y="338" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Special Offers"/>
+                                <connections>
+                                    <action selector="specialOffersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yUx-OC-gE0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="h6s-Uh-lC3"/>
+                    <connections>
+                        <segue destination="W9q-YP-b64" kind="show" identifier="showOffers" id="Nfm-Qb-r5f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="815.20000000000005" y="133.5832083958021"/>
+        </scene>
+        <!--Offer Table View Controller-->
+        <scene sceneID="S33-tw-1Un">
+            <objects>
+                <tableViewController id="W9q-YP-b64" customClass="OfferTableViewController" customModule="HotelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EmV-Kl-oT9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="W9q-YP-b64" id="SKx-5X-Ud1"/>
+                            <outlet property="delegate" destination="W9q-YP-b64" id="Lhn-2p-CVY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbO-jj-G47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="134"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ugY-CJ-FwD">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TL8-DW-eUO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backgroundImage="blue" id="Ggr-dY-2ZD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.17254901959999999" green="0.26274509800000001" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jJU-VK-8cA" kind="relationship" relationship="viewControllers" id="MCU-ep-igJ"/>
+                        <segue destination="mL2-tT-DgO" kind="relationship" relationship="viewControllers" id="ke8-Ue-iSL"/>
+                        <segue destination="Pph-0U-yvg" kind="relationship" relationship="viewControllers" id="R8I-dv-TJL"/>
+                        <segue destination="rN5-0x-5ud" kind="relationship" relationship="viewControllers" id="zSj-GQ-REN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgJ-v0-rmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914" y="134"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Uyf-dH-6hr">
+            <objects>
+                <viewController id="mL2-tT-DgO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7zu-xI-hAT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GaF-Lb-flU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cMa-cV-4li"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DzL-58-0Do" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1536" y="949"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="KSZ-Wp-ERo">
+            <objects>
+                <viewController id="Pph-0U-yvg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RqS-HJ-F7o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pxu-Pv-fzn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ZMe-qQ-ahb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uy3-fZ-Ec4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-793" y="960"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="HDy-TO-IZn">
+            <objects>
+                <viewController id="rN5-0x-5ud" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ay9-C4-D5g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IVp-rh-b7E"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Kyu-CR-L4h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ekd-EV-lgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="965"/>
+        </scene>
+        <!--Hotels-->
+        <scene sceneID="7Qr-Nf-UlI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jJU-VK-8cA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hotels" image="hotels" selectedImage="hotels-active" id="4Qf-Sf-IHW">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HfY-hB-ahj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="blN-P6-Udl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yPz-dE-Pg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blue" width="331" height="48"/>
+        <image name="hotels" width="30" height="30"/>
+        <image name="hotels-active" width="30" height="30"/>
+    </resources>
 </document>
